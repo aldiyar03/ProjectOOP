@@ -11,7 +11,6 @@ public class AddProductService {
         this.productRepository = new ProductRepository();
     }
 
-
     public void addProduct() {
         Scanner scanner = new Scanner(System.in);
 

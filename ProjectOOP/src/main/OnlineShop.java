@@ -15,7 +15,6 @@ public class OnlineShop {
         CartService cartService = new CartService();
         FAQService faqService = new FAQService();
         AddProductService addProductService = new AddProductService();  // Создаем сервис для добавления продукта
-
         while (true) {
             System.out.println("\n===== Online Shop Menu =====");
             System.out.println("1. Show Products");
@@ -25,7 +24,6 @@ public class OnlineShop {
             System.out.println("5. Add Product");
             System.out.println("6. Exit");
             System.out.print("Choose an option: ");
-
             int choice = scanner.nextInt();
 
             switch (choice) {
