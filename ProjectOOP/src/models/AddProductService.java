@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class AddProductService {
 
     private ProductRepository productRepository;
-
     public AddProductService() {
         this.productRepository = new ProductRepository();
     }
