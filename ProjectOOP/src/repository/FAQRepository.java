@@ -14,7 +14,7 @@ public class FAQRepository {
     private Connection connection;
 
     public FAQRepository() throws SQLException {
-        this.connection = DatabaseConnection.   getConnection();
+        this.connection = DatabaseConnection.getConnection();
     }
 
     public List<FAQ> getFAQs() {
