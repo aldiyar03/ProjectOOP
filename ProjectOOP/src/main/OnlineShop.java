@@ -1,10 +1,11 @@
 package main;
 
+import models.Product;
 import repository.ProductRepository;
 import services.CartService;
 import services.FAQService;
 import services.AuthService;
-import models.Product;
+import services.PaymentService;
 
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -24,6 +25,7 @@ public class OnlineShop {
         ProductRepository productRepository = new ProductRepository();
         CartService cartService = new CartService();
         FAQService faqService = new FAQService();
+        PaymentService paymentService = new PaymentService();
 
         while (true) {
             System.out.println("\n===== Online Shop Menu =====");
@@ -31,7 +33,8 @@ public class OnlineShop {
             System.out.println("2. Add Product to Cart");
             System.out.println("3. Show Cart");
             System.out.println("4. Show FAQs");
-            System.out.println("5. Exit");
+            System.out.println("5. Make Payment");
+            System.out.println("6. Exit");
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
@@ -59,6 +62,9 @@ public class OnlineShop {
                     faqService.showFAQs();
                     break;
                 case 5:
+                    paymentService.processPayment();
+                    break;
+                case 6:
                     System.out.println("Exiting...");
                     return;
                 default:
